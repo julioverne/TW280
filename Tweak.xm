@@ -12,6 +12,12 @@
 }
 %end
 
+%hook TFNTwitterComposition
+- (NSUInteger)_maximumCharacterCount
+{
+	return %orig * 2;
+}
+%end
 
 static BOOL tmpDisable;
 
